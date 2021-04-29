@@ -1,8 +1,11 @@
 #include "Background.h"
+#include "PlayerInitialization.h"
 #include<iostream>
 using namespace std;
 
 int main() {
-	Background x;
-	x.print();
+	Background gameBackground;
+	PlayerInitialization gameInitialization;
+	gameBackground.print();
+	gameInitialization.print();
 }
