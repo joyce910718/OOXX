@@ -19,6 +19,6 @@ void Background::print() {
 	cout << "          7   |  8  |  9" << endl;
 	cout << "    玩家輸入數字，選擇要落子的位置" << "\n" << endl;
 	cout << "棋子選擇:" << endl;
-	cout << "          O為:先攻" << endl;
-	cout << "          X為:先守" << endl;
+	cout << "          X為:先攻" << endl;
+	cout << "          O為:先守" << endl;
 }
