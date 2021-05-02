@@ -29,6 +29,6 @@ void PlayerInitialization::print() {
 	cout << "\n" << Player1_Name << " 請選擇棋子:" << "\n" << setw(14) << " " << "( 輸入大寫英文字母 O 或 X )" << "\n\n" << setw(25) << Player1_Name << setw(8) << " 棋子為: ";
 	cin >> Player1_Chessman;
 	(Player1_Chessman == "O") ? Player2_Chessman = "X" : Player2_Chessman = "O";
-	cout << setw(25) << Player2_Name << setw(8) << " 棋子為: " << Player2_Chessman << endl;
+	cout << setw(25) << Player2_Name << setw(8) << " 棋子為: " << Player2_Chessman << "\n\n\n" << endl;
 
 }

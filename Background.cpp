@@ -1,6 +1,9 @@
 #include "Background.h"
 
- 
+#include<iostream>
+using namespace std;
+
+Background::Background() {}
 void Background::print() {
 	cout << "歡迎來到遊戲的世界" << endl;
 	cout << "此遊戲為井字遊戲" << "\n" << endl;
