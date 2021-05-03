@@ -1,7 +1,9 @@
 #ifndef TictactoeBegin_h
 #define TictactoeBegin_h
 
+#include "PlayerInitialization.h"
 #include<iostream>
+#include<string>
 using namespace std;
 
 class TictactoeBegin {
@@ -9,6 +11,8 @@ class TictactoeBegin {
 private:
 	char *array;
 	int loop = 0, space = 0;
+	string offensive, defensive;
+	PlayerInitialization who, gameInitialization;
 
 public:
 	TictactoeBegin();
