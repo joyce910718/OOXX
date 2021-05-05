@@ -62,7 +62,9 @@ void TictactoeBegin::choiceLayingDownPieces() {
 							(array[3] == array[6] && array[3] == array[9] && array[3] != ' ') ||
 							(array[1] == array[5] && array[1] == array[9] && array[1] != ' ') ||
 							(array[3] == array[5] && array[3] == array[7] && array[3] != ' ')) {
-
+							
+							peace++;
+							
 							( loop % 2 == 0 ) ? cout << offensive <<" 獲勝\n" : cout << defensive << " 獲勝\n";
 							break;
 						}
