@@ -35,16 +35,16 @@ void TictactoeBegin::choiceLayingDownPieces() {
 		while (loop < 9) {
 
 			switch (loop % 2) {
-				case 0: cout << offensive << " ½Ð¿é¤J¸¨¤l¦ì¸m¡G"; break;
-				case 1: cout << defensive << " ½Ð¿é¤J¸¨¤l¦ì¸m¡G"; break;
+				case 0: cout << offensive << " è«‹è¼¸å…¥è½å­ä½ç½®ï¼š"; break;
+				case 1: cout << defensive << " è«‹è¼¸å…¥è½å­ä½ç½®ï¼š"; break;
 			}
 			cin >> space;
 
 			if ( array[space] == 'O' || array[space] == 'X' ) {
-				cout << "\n                ¿é¤J¿ù»~\n\n" << endl;
+				cout << "\n                è¼¸å…¥éŒ¯èª¤\n\n" << endl;
 			}else {
 						if ( space > 9 || space < 1 ) {
-							cout << "\n§Aªº´Ñ¤lÂ\©ñ¦ì¸m¤w¶W¥X½d³ò¡A½Ð­«·s¿ï¦ì\n\n" << endl;
+							cout << "\nä½ çš„æ£‹å­æ“ºæ”¾ä½ç½®å·²è¶…å‡ºç¯„åœï¼Œè«‹é‡æ–°é¸ä½\n\n" << endl;
 						}else {
 							switch ( loop % 2 ) {
 								case 0: array[space] = 'X'; break;
@@ -63,11 +63,12 @@ void TictactoeBegin::choiceLayingDownPieces() {
 							(array[1] == array[5] && array[1] == array[9] && array[1] != ' ') ||
 							(array[3] == array[5] && array[3] == array[7] && array[3] != ' ')) {
 
-							( loop % 2 == 0 ) ? cout << offensive <<" Àò³Ó\n" : cout << defensive << " Àò³Ó\n";
+							( loop % 2 == 0 ) ? cout << offensive <<" ç²å‹\n" : cout << defensive << " ç²å‹\n";
 							break;
 						}
 
 					loop++;
 			}
 		}
+		(peace == 0) ? cout << "å¹³æ‰‹å•¦å‘µå‘µå‘µ" : cout << endl;
 }
