@@ -7,31 +7,33 @@ using namespace std;
 PlayerInitialization::PlayerInitialization(){}
 
 void PlayerInitialization::print() {
-	cout << "\n" << "¿ï¾Üª±ªk:" << endl;
-	cout << setw(10) << " " << "ª±ªk1: ³æ¤H¼Ò¦¡ / ¤H¾÷¼Ò¦¡" << endl;
-	cout << setw(10) << " " << "ª±ªk2: Âù¤H¼Ò¦¡" << "\n" << endl;
-	cout << "½Ð¿é¤Jª±ªk:" << "\n" << setw(12) << " " << "( ¿é¤J¼Æ¦r 1 ©Î 2 )" << "\n\n" << setw(17) << " " << "ª±ªk";
+	cout << "\n" << "é¸æ“‡çŽ©æ³•:" << endl;
+	cout << setw(10) << " " << "çŽ©æ³•1: å–®äººæ¨¡å¼ / äººæ©Ÿæ¨¡å¼" << endl;
+	cout << setw(10) << " " << "çŽ©æ³•2: é›™äººæ¨¡å¼" << "\n" << endl;
+	cout << "è«‹è¼¸å…¥çŽ©æ³•:" << "\n" << setw(12) << " " << "( è¼¸å…¥æ•¸å­— 1 æˆ– 2 )" << "\n\n" << setw(17) << " " << "çŽ©æ³•";
 	cin >> pickAMode;
 
 	if (pickAMode == 1) {
-		cout << "\n" << "½Ðª±®a¿é¤J©m¦W:" << endl;
-		cout << setw(16) << " " << "ª±®a¤@¹CÀ¸¦WºÙ: ";
-		cin >> Player1_Name;
+		cout << "\n" << "è«‹çŽ©å®¶è¼¸å…¥å§“å:" << endl;
+		cout << setw(16) << " " << "çŽ©å®¶ä¸€éŠæˆ²åç¨±: ";
+		cin.ignore();
+		getline(cin, Player1_Name);
 		Player2_Name = "computer";
 	}
 
 	else {
-		cout << "\n" << "½Ðª±®a¿é¤J©m¦W:" << endl;
-		cout << setw(16) << " " << "ª±®a¤@¹CÀ¸¦WºÙ: ";
-		cin >> Player1_Name;
-		cout << setw(16) << " " << "ª±®a¤G¹CÀ¸¦WºÙ: ";
-		cin >> Player2_Name;
+		cout << "\n" << "è«‹çŽ©å®¶è¼¸å…¥å§“å:" << endl;
+		cout << setw(16) << " " << "çŽ©å®¶ä¸€éŠæˆ²åç¨±: ";
+		cin.ignore();
+		getline(cin, Player1_Name);
+		cout << setw(16) << " " << "çŽ©å®¶äºŒéŠæˆ²åç¨±: ";
+		getline(cin, Player2_Name);
 	}
 
-	cout << "\n" << Player1_Name << " ½Ð¿ï¾Ü´Ñ¤l:" << "\n" << setw(14) << " " << "( ¿é¤J¤j¼g­^¤å¦r¥À O ©Î X )" << "\n\n" << setw(25) << Player1_Name << setw(8) << " ´Ñ¤l¬°: ";
+	cout << "\n" << Player1_Name << " è«‹é¸æ“‡æ£‹å­:" << "\n" << setw(14) << " " << "( è¼¸å…¥å¤§å¯«è‹±æ–‡å­—æ¯ O æˆ– X )" << "\n\n" << setw(25) << Player1_Name << setw(8) << " æ£‹å­ç‚º: ";
 	cin >> Player1_Chessman;
 	Player2_Chessman = (Player1_Chessman == "O") ?  "X" : "O";
-	cout << setw(25) << Player2_Name << setw(8) << " ´Ñ¤l¬°: " << Player2_Chessman << "\n\n\n" << endl;
+	cout << setw(25) << Player2_Name << setw(8) << " æ£‹å­ç‚º: " << Player2_Chessman << "\n\n\n" << endl;
 }
 
 string PlayerInitialization::getPlayer1_Chessman() const{
