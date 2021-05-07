@@ -12,7 +12,7 @@ private:
 	char *array;
 	int loop = 0, space = 0, peace = 0;
 	string offensive, defensive;
-	PlayerInitialization who, gameInitialization;
+	PlayerInitialization gameInitialization;
 
 public:
 	TictactoeBegin();
@@ -20,4 +20,3 @@ public:
 	void choiceLayingDownPieces();
 };
 #endif
-
