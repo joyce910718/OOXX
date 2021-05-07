@@ -11,6 +11,7 @@ private:
 
 public:
 	PlayerInitialization();
+	void print_loading();
 	void print();
 	string getPlayer1_Chessman() const;
 	string getPlayer2_Chessman() const;
