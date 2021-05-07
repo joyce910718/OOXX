@@ -1,28 +1,32 @@
 #include "Background.h"
 
+#include<iomanip>
 #include<iostream>
+#include<cstdlib>
 using namespace std;
 
 Background::Background() {}
 void Background::print() {
-	cout << "\nÅwªï¨Ó¨ì¹CÀ¸ªº¥@¬É" << endl;
-	cout << " ¦¹¹CÀ¸¬°¤«¦r¹CÀ¸" << "\n" << endl;
-	cout << "¹CÀ¸¤H¼Æ:" << endl;
-	cout << "          2¤H" << "\n" << endl;
-	cout << "¹CÀ¸»¡©ú:" << endl;
-	cout << "          ¨â¦Wª±®a½ü¬y¦b¤E®c®æ¤Wµe¤W¦Û¤vªº´Ñ¤l¡A¤£½×¾î½u¡Bª½½u¡B±×½u¡A³Ì¥ý±N¤T¤l³s½uªº¤@¤èÀò³Ó¡C" << "\n" << endl;
-	cout << "¸¨¤l¦ì¸m¿ï¾Ü:" << "\n" << endl;
-	cout << "                   |     |     " << endl;
-	cout << "                1  |  2  |  3" << endl;
-	cout << "              _____|_____|_____" << endl;
-	cout << "                   |     |     " << endl;
-	cout << "                4  |  5  |  6  " << endl;
-	cout << "              _____|_____|_____" << endl;
-	cout << "                   |     |     " << endl;
-	cout << "                7  |  8  |  9  " << endl;
-	cout << "                   |     |     " << endl;
-	cout << "         ª±®a¿é¤J¼Æ¦r¡A¿ï¾Ü­n¸¨¤lªº¦ì¸m" << "\n" << endl;
-	cout << "´Ñ¤l¿ï¾Ü:" << endl;
-	cout << "          X¬°:¥ý§ð" << endl;
-	cout << "          O¬°:¥ý¦u" << endl;
+	system("color E1");
+	cout << "\n.............................................................................................................................................................................................\n\n";
+	cout << setw(80) << "\t" << "æ­¡è¿Žä¾†åˆ°éŠæˆ²çš„ä¸–ç•Œ" << endl;
+	cout << setw(80) << "\t" << " æ­¤éŠæˆ²ç‚ºäº•å­—éŠæˆ²" << "\n\n\n";
+	cout << setw(20) << "\t" << "éŠæˆ²äººæ•¸:" << endl;
+	cout << setw(20) << "\t" << "          2äºº" << "\n\n\n";
+	cout << setw(20) << "\t" << "éŠæˆ²èªªæ˜Ž:" << endl;
+	cout << setw(20) << "\t" << "          å…©åçŽ©å®¶è¼ªæµåœ¨ä¹å®®æ ¼ä¸Šç•«ä¸Šè‡ªå·±çš„æ£‹å­ï¼Œä¸è«–æ©«ç·šã€ç›´ç·šã€æ–œç·šï¼Œæœ€å…ˆå°‡ä¸‰å­é€£ç·šçš„ä¸€æ–¹ç²å‹ã€‚" << "\n\n\n\n";
+	cout << setw(20) << "\t" << "è½å­ä½ç½®é¸æ“‡:" << "\n\n";
+	cout << setw(20) << "\t" << "                           |     |     " << endl;
+	cout << setw(20) << "\t" << "                        1  |  2  |  3  " << endl;
+	cout << setw(20) << "\t" << "                      _____|_____|_____" << endl;
+	cout << setw(20) << "\t" << "                           |     |     " << endl;
+	cout << setw(20) << "\t" << "                        4  |  5  |  6  " << endl;
+	cout << setw(20) << "\t" << "                      _____|_____|_____" << endl;
+	cout << setw(20) << "\t" << "                           |     |     " << endl;
+	cout << setw(20) << "\t" << "                        7  |  8  |  9  " << endl;
+	cout << setw(20) << "\t" << "                           |     |     " << endl;
+	cout << "\n" << setw(20) << "\t" << "                 çŽ©å®¶è¼¸å…¥æ•¸å­—ï¼Œé¸æ“‡è¦è½å­çš„ä½ç½®" << "\n\n\n";
+	cout << setw(20) << "\t" << "æ£‹å­é¸æ“‡:" << endl;
+	cout << setw(20) << "\t" << "          Xç‚º:å…ˆæ”»" << endl;
+	cout << setw(20) << "\t" << "          Oç‚º:å…ˆå®ˆ" << endl;
 }
