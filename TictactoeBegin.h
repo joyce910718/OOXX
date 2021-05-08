@@ -10,7 +10,8 @@ class TictactoeBegin {
 
 private:
 	char *array;
-	int loop = 0, space = 0, peace = 0;
+	static int peace;
+	int space = 0, loop = 0;
 	string offensive, defensive;
 	PlayerInitialization gameInitialization;
 
@@ -18,5 +19,6 @@ public:
 	TictactoeBegin();
 	void print();
 	void choiceLayingDownPieces();
+	bool Gameover();
 };
 #endif
