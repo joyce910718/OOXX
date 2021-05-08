@@ -2,8 +2,8 @@
 #include<iostream>
 #include<iomanip>
 #include<string>
-#include<Windows.h>
-#include<cstdlib>
+#include<Windows.h>  //使用Sleep( )       需引用 Windows.h 的內建功能設計
+#include<cstdlib>	 //使用system( " " )  需引用 cstdlib 的函式庫
 using namespace std;
 
 PlayerInitialization::PlayerInitialization(){}
@@ -11,57 +11,60 @@ PlayerInitialization::PlayerInitialization(){}
 void PlayerInitialization::print_loading() {
 	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 	for (int i = 0; i <= 100; i++) {
-		if (i % 3 == 0) 
+
+		if (i % 4 == 0)
+			cout << setw(90) << "遊戲加載中   " << setw(3) << i << setw(1) << "%";
+		else if (i % 4 == 1) 
 			cout << setw(90) << "遊戲加載中.  " << setw(3) << i << setw(1) << "%";
 
-		else if (i % 3 == 1)
+		else if (i % 4 == 2)
 			cout << setw(90) << "遊戲加載中.. " << setw(3) << i << setw(1) << "%";
 	
 		else
 			cout << setw(90) << "遊戲加載中..." << setw(3) << i << setw(1) << "%";
 			
-		Sleep(100);
-		cout << "\r";
+		Sleep(100);			//讓程式暫停執行100毫秒（相當於0.1秒）
+		cout << "\r";		// "\r" 可將游標移至輸出當行的最左邊：用以覆寫執行結果
 	}
 }
 
 
 void PlayerInitialization::print() {
-	system("color E1");
+	system("color E1");		//設定執行後的背景色與字體色   背景色為 E：淡黃色   字體色 1 為：藍色
 	cout << endl;
-	system("pause");
-	system("cls");
+	system("pause");		//暫停輸出以便玩家有確實觀看遊戲說明
+	system("cls");			//清空視窗上的輸出資訊
 
 	print_loading();
 	system("cls");
 
-	cout << "\n\n\n" << setw(20) << "\t" << "選擇玩法:" << endl;
-	cout << setw(34) << " " << "玩法1: 單人模式 / 人機模式\n";
-	cout << setw(34) << " " << "玩法2: 雙人模式\n\n\n";
-	cout << setw(20) << "\t" << "請輸入玩法:" << "\n" <<  setw(36) << " " << "( 輸入數字 1 或 2 )" << "\n\n" << setw(42) << " " << "玩法 ";
+	cout << "\n\n\n" << setw(20) << "\t" << "選擇模式：" << endl;
+	cout << setw(34) << " " << "模式 1： 單人模式 / 人機模式\n";
+	cout << setw(34) << " " << "模式 2： 雙人模式\n\n\n";
+	cout << setw(20) << "\t" << "請輸入模式：" << "\n" <<  setw(36) << " " << "( 輸入數字 1 或 2 )" << "\n\n" << setw(42) << " " << "模式 ";
 	cin >> pickAMode;
 
-	if (pickAMode == 1) {
-		cout << "\n\n" << setw(20) << "\t" << "請玩家輸入姓名:" << endl;
-		cout << setw(36) << "\t" << "玩家一遊戲名稱: ";
+	if (pickAMode == 1) {	//單人模式
+		cout << "\n\n" << setw(20) << "\t" << "請玩家輸入姓名：" << endl;
+		cout << setw(36) << "\t" << "玩家一遊戲名稱： ";
 		cin.ignore();
 		getline(cin, Player1_Name);
 		Player2_Name = "computer";
 	}
 
-	else {
-		cout << "\n\n" << setw(20) << "\t" << "請玩家輸入姓名:" << endl;
-		cout << setw(36) << "\t" << "玩家一遊戲名稱: ";
+	else {					//雙人模式
+		cout << "\n\n" << setw(20) << "\t" << "請玩家輸入姓名：" << endl;
+		cout << setw(36) << "\t" << "玩家一遊戲名稱： ";
 		cin.ignore();
 		getline(cin, Player1_Name);
-		cout << setw(36) << "\t" << "玩家二遊戲名稱: ";
+		cout << setw(36) << "\t" << "玩家二遊戲名稱： ";
 		getline(cin, Player2_Name);
 	}
 
-	cout << "\n\n" << setw(20) << "\t" << Player1_Name << " 請選擇棋子:" << "\n" << setw(41) << " " << "( 輸入大寫英文字母 O 或 X )" << "\n\n" << setw(50) << Player1_Name << setw(8) << " 棋子為: ";
+	cout << "\n\n" << setw(20) << "\t" << Player1_Name << " 請選擇棋子：" << "\n" << setw(41) << " " << "( 輸入大寫英文字母 O 或 X )" << "\n\n" << setw(50) << Player1_Name << setw(8) << " 棋子為： ";
 	cin >> Player1_Chessman;
-	Player2_Chessman = (Player1_Chessman == "O") ? "X" : "O";
-	cout << setw(50) << Player2_Name << setw(8) << " 棋子為: " << Player2_Chessman << "\n\n\n" << endl;
+	Player2_Chessman = (Player1_Chessman == "O") ? "X" : "O";	//判斷玩家2的棋子是 "X" 還是 "O"
+	cout << setw(50) << Player2_Name << setw(8) << " 棋子為： " << Player2_Chessman << "\n\n\n" << endl;
 }
 
 string PlayerInitialization::getPlayer1_Chessman() const {
