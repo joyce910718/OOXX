@@ -37,6 +37,7 @@ void TictactoeBegin::choiceLayingDownPieces() {
 
 	while (loop < 9) {
 
+		cout << setw(18) << "\t" << "*******************************************************************************************************************\n\n\n";
 		switch (loop % 2) {		//判斷判斷目前由哪位玩家落子
 			case 0: cout <<  setw(20) << "\t" << "(進攻方) " << offensive << " 請輸入落子位置："; break;
 			case 1: cout << setw(20) << "\t" << "(防守方) " << defensive << " 請輸入落子位置："; break;
@@ -59,12 +60,14 @@ void TictactoeBegin::choiceLayingDownPieces() {
 			}
 
 			if (Gameover()) {	//如果已有玩家勝利，則進行 if 內的程式碼，並跳出迴圈
+				cout << setw(18) << "\t" << "*******************************************************************************************************************\n\n\n";
 				(loop % 2 == 0) ? cout << setw(20) << "\t" << "進攻方： " << offensive << " 獲勝\n" : cout << setw(20) << "\t" << "防守方： " << defensive << " 獲勝\n";
 				break;
 			}	
 		}
 	}
-	(peace == 0) ? cout << setw(20) << "\t" << "平手啦呵呵呵" << endl : cout << endl;
+	cout << "\n\n\n" << setw(18) << "\t" << "*******************************************************************************************************************\n\n";
+	(peace == 0) ? cout << setw(20) << "\t" << "平手啦呵呵呵\n\n" : cout << endl;
 }
 
 bool TictactoeBegin::Gameover() {	//此函式功能為：判斷勝負 
