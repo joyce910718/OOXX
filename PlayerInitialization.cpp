@@ -28,8 +28,8 @@ void PlayerInitialization::loading() {
 	}
 }
 
-void PlayerInitialization::setPickAMode() {
-		cin >> pickAMode;
+void PlayerInitialization::setPickAMode( int pickAMode ) {
+	this->pickAMode = pickAMode;
 }
 
 void PlayerInitialization::setPlayer1_Name(){
