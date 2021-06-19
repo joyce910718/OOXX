@@ -96,7 +96,8 @@ void PlayerInitialization::COUTmodeError() {
 
 void PlayerInitialization::COUTnameError() {
 	cout << setw(18) << "\t" << "*******************************************************************************************************************\n\n";
-	cout << setw(20) << "\t" << "玩家一與玩家二遊戲名稱重複，無辨識度，請重新輸入";
+	cout << setw(20) << "\t" << "玩家一與玩家二遊戲名稱重複，無辨識度，請重新輸入\n" << endl;
+	cout << setw(20) << "\t" << "看完訊息後請按下Enter鍵";
 	Sleep(200);
 }
 
