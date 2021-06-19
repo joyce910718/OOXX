@@ -24,6 +24,9 @@ public:
 	string getPlayer1_Chessman() const;		//此函式功能為：回傳玩家一的棋子
 	string getPlayer2_Chessman() const;		//此函式功能為：回傳玩家二的棋子
 	int getPickAMode() const;				//此函式功能為：回傳遊戲模式
-	
+	void COUTmodeError();					//此函式功能為：玩家選擇的模式不符合遊戲規則 的輸出內容
+	void COUTnameError();					//此函式功能為：玩家輸入的名字不符合遊戲規則 的輸出內容
+	void COUTchessmanError();				//此函式功能為：玩家選擇的棋子不符合遊戲規則 的輸出內容
+
 };
 #endif
