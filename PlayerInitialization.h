@@ -13,7 +13,6 @@ protected:
 public:
 	PlayerInitialization();
 	void loading();						    //此函式功能為：輸出「遊戲加載中」的樣式
-	void print();							//此函式功能為：輸出資料
 	void setPickAMode();					//此函式功能為：令使用者選擇遊戲模式
 	void setPlayer1_Name();					//此函式功能為：設置一號玩家的姓名
 	void setPlayer2_Name();					//此函式功能為：設置二號玩家的姓名
