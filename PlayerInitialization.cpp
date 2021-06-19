@@ -102,6 +102,6 @@ void PlayerInitialization::COUTnameError() {
 
 void PlayerInitialization::COUTchessmanError() {
 	cout << setw(18) << "\t" << "*******************************************************************************************************************\n\n";
-	cout << setw(20) << "\t" << Player2_Name << "所輸入的棋子不符合遊戲規則，請重新輸入";
+	cout << setw(20) << "\t" << Player1_Name << "所輸入的棋子不符合遊戲規則，請重新輸入";
 	Sleep(200);
 }
