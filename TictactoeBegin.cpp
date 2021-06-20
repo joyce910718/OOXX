@@ -2,7 +2,6 @@
 #include "TictactoeBegin.h"
 #include<iostream>
 #include<iomanip>
-#include<string>
 using namespace std;
 
 bool TictactoeBegin::peace = false;
@@ -27,10 +26,25 @@ void TictactoeBegin::print() {						//匯出九宮格
 
 }
 
-void TictactoeBegin::choiceLayingDownPieces() {
+void TictactoeBegin::setOffensive() {
+	(PlayerInitialization::Player1_Chessman == "X") ? offensive = PlayerInitialization::Player1_Name : offensive = PlayerInitialization::Player2_Name;	//進攻者的玩家名稱設給 變數：offensive;
+}
 
-	(getPlayer1_Chessman() == "X") ? offensive = getPlayer1_Name() : offensive = getPlayer2_Name();	//進攻者的玩家名稱設給 變數：offensive
-	(getPlayer1_Chessman() == "O") ? defensive = getPlayer1_Name() : defensive = getPlayer2_Name();	//防守方的玩家名稱設給 變數：defensive
+void TictactoeBegin::setDefensive() {
+	(PlayerInitialization::Player1_Chessman == "O") ? defensive = PlayerInitialization::Player1_Name : defensive = PlayerInitialization::Player2_Name;	//防守方的玩家名稱設給 變數：defensive
+}
+
+string  TictactoeBegin::getOffensive() const {	 //此函式功能為：回傳進攻方的姓名
+	return offensive;
+}
+
+string  TictactoeBegin::getDefensive() const {	 //此函式功能為：回傳防守方的姓名
+	return defensive;
+}
+
+void TictactoeBegin::choiceLayingDownPieces() {
+	setOffensive();
+	setDefensive();
 
 	while (loop < 9) {			//表示尚未填滿九宮格，繼續進行迴圈
 
