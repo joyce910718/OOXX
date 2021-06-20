@@ -13,7 +13,7 @@ protected:
 public:
 	PlayerInitialization();
 	void loading();						    //此函式功能為：輸出「遊戲加載中」的樣式
-	void setPickAMode( int );					//此函式功能為：令使用者選擇遊戲模式
+	void setPickAMode( int mode );			//此函式功能為：令使用者選擇遊戲模式
 	void setPlayer1_Name();					//此函式功能為：設置一號玩家的姓名
 	void setPlayer2_Name();					//此函式功能為：設置二號玩家的姓名
 	void setPlayer1_Chessman();				//此函式功能為：令一號玩家選擇棋子
