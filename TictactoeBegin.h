@@ -19,6 +19,7 @@ public:
 	void setDefensive();							//此函式功能為：將防守者的姓名設置給變數 defensive
 	string getOffensive() const;					//此函式功能為：回傳進攻方的姓名
 	string getDefensive() const;					//此函式功能為：回傳防守方的姓名
+	bool isSpaceFull();								//此函式功能為：判斷此格是否已有其他棋子
 	void print();									//此函式功能為：匯出九宮格
 	void choiceLayingDownPieces();					//此函式功能為：玩家選擇落子位置
 	bool Gameover();								//此函式功能為：判斷勝負
