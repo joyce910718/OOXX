@@ -83,6 +83,7 @@ int main() {
 	while (loop < 9) {														//表示尚未填滿九宮格，繼續進行迴圈
 
 		cout << setw(18) << "\t" << "*******************************************************************************************************************\n\n\n";
+		gameBackground.Nine_Square_Division();
 		switch (loop % 2) {													//判斷判斷目前由哪位玩家落子
 			case 0: cout << setw(20) << "\t" << "(進攻方) " << player.getOffensive() << " 請輸入落子位置："; break;
 			case 1: cout << setw(20) << "\t" << "(防守方) " << player.getDefensive() << " 請輸入落子位置："; break;
@@ -90,21 +91,22 @@ int main() {
 
 		cin >> space;														//玩家輸入想落子的位置
 		player.setSpace( space );											//此函式功能為：設置玩家選擇的落子位置
+		gameBackground.setArray(space);
 
-		if (player.getSpace() > 9 || player.getSpace() < 1) {				//玩家選擇的位置已超出可選擇的範圍，需重新輸入
+		if (player.getSpace() > 9 || player.getSpace() < 1) {		//玩家選擇的位置已超出可選擇的範圍，需重新輸入
 			cout << "\n" << setw(30) << " " << "                  您的棋子擺放位置已超出範圍，請重新選位\n\n" << endl;
 			continue;
 		}
 
-		else if ( player.isSpaceFull() ) {								    //玩家選擇的位置已有棋子
+		else if ( player.isSpaceFull(space) ) {								    //玩家選擇的位置已有棋子
 			cout << "\n" << setw(30) << " " << "                  此格已有棋子，請重選一格\n\n" << endl;
 			continue;
 		}
 
 		else {																//遊戲正常進行														
 				switch (loop % 2) {											//判斷判斷目前由哪個棋子落子
-					case 0: player.PutDown( 'X' ); break;					//將玩家對應到的棋子傳入函式中
-					case 1: player.PutDown( 'O' ); break;					//將玩家對應到的棋子傳入函式中
+					case 0: player.setArr(space, 'X' ); break;				//將玩家輸入的位置與對應到的棋子傳入函式中
+					case 1: player.setArr(space, 'O' ); break;				//將玩家輸入的位置與對應到的棋子傳入函式中
 				}
 
 				player.print();												// 匯出九宮格
