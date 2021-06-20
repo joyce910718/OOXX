@@ -6,21 +6,21 @@ using namespace std;
 
 TictactoeBegin::TictactoeBegin() {					//將 array 變數的值初始化為空格字元
 	arr = new char[10];
+
 	for (int i = 1; i <= 9; i++)
 		arr[i] = ' ';
 }
 
 void TictactoeBegin::print() {						//匯出九宮格
-	cout << "\n\n" << setw(34) << " " << "     |     |     " << endl;
-	cout		   << setw(34) << " " << "  " << arr[7] << "  |  " << arr[8] << "  |  " << arr[9] << endl;
-	cout		   << setw(34) << " " << "_____|_____|_____" << endl;
-	cout		   << setw(34) << " " << "     |     |     " << endl;
-	cout		   << setw(34) << " " << "  " << arr[4] << "  |  " << arr[5] << "  |  " << arr[6] << endl;
-	cout		   << setw(34) << " " << "_____|_____|_____" << endl;
-	cout		   << setw(34) << " " << "     |     |   " << endl;
-	cout		   << setw(34) << " " << "  " << arr[1] << "  |  " << arr[2] << "  |  " << arr[3] << endl;
-	cout		   << setw(34) << " " << "     |     |   \n\n" << endl;
-
+	cout << setw(50) << "\t" << "     |     |     " << endl;
+	cout << setw(50) << "\t" << "  " << arr[7] << "  |  " << arr[8] << "  |  " << arr[9] << endl;
+	cout << setw(50) << "\t" << "_____|_____|_____" << endl;
+	cout << setw(50) << "\t" << "     |     |     " << endl;
+	cout << setw(50) << "\t" << "  " << arr[4] << "  |  " << arr[5] << "  |  " << arr[6] << endl;
+	cout << setw(50) << "\t" << "_____|_____|_____" << endl;
+	cout << setw(50) << "\t" << "     |     |   " << endl;
+	cout << setw(50) << "\t" << "  " << arr[1] << "  |  " << arr[2] << "  |  " << arr[3] << endl;
+	cout << setw(50) << "\t" << "     |     |   \n\n" << endl;
 }
 
 void TictactoeBegin::setOffensive() {
@@ -47,12 +47,18 @@ int TictactoeBegin::getSpace() const {
 	return space;
 }
 
-void TictactoeBegin::PutDown(  char OX ) {		//此函式功能為：將玩家輸入的下棋位子與對應到的棋子，紀錄至陣列中
-	arr[space] = OX;
+void TictactoeBegin::setArr(int index , char OX) {		//此函式功能為：將玩家輸入的下棋位子與對應到的棋子，紀錄至陣列中
+	arr[index] = OX;
 }
 
-bool TictactoeBegin::isSpaceFull() {
-	return ( ( arr[space] != ' ' ) ? true : false );
+char TictactoeBegin::getArr(int index) const {
+	return arr[index];
+}
+
+
+
+bool TictactoeBegin::isSpaceFull(int index) {
+	return ( (getArr(index) != ' ' ) ? true : false );
 }
 
 bool TictactoeBegin::isGameover() {	//此函式功能為：判斷勝負 
