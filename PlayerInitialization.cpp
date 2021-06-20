@@ -1,7 +1,6 @@
 #include "PlayerInitialization.h"
 #include<iostream>
 #include<iomanip>
-#include<string>
 #include<Windows.h>  //使用Sleep( )       需引用 Windows.h 的內建功能設計
 #include<cstdlib>	 //使用system( " " )  需引用 cstdlib 的函式庫
 using namespace std;
